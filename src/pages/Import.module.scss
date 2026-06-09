@@ -176,7 +176,8 @@
             border-radius: 24px;
             background: #ffffff0f;
             padding: 17px 23px;
-            width: 345px;
+            width: 100%;
+            max-width: 345px;
             height: 62px;
             transition: all 0.25s ease;
             cursor: default;
@@ -237,8 +238,6 @@
             flex-shrink: 0;
             align-items: center;
             padding-bottom: 1px;
-            width: 173px;
-            height: 17px;
 
             .text2 {
               line-height: 17px;
@@ -346,13 +345,13 @@
             .text8 {
               flex-shrink: 0;
               padding: 10px 0px 0px;
-              width: 349px;
-              height: 31px;
+              max-width: 100%;
               line-height: 21px;
               letter-spacing: 0.05px;
               color: #ffffff6b;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 14px;
+              white-space: nowrap;
             }
           }
 
@@ -419,7 +418,8 @@
                 border-radius: 28px;
                 background: #ffffff0d;
                 padding: 21px 19px;
-                width: 349px;
+                width: 100%;
+                max-width: 349px;
                 height: 352px;
                 overflow: hidden;
 
@@ -663,7 +663,7 @@
                       height: 41px;
 
                       .text17 {
-                        width: 258px;
+                        max-width: 100%;
                         line-height: 21px;
                         letter-spacing: 0;
                         color: #000000;
@@ -701,7 +701,8 @@
               align-items: flex-start;
               padding-top: 14px;
               padding-bottom: 30px;
-              width: 349px;
+              width: 100%;
+              max-width: 349px;
               height: 133px;
 
               .text18 {
@@ -722,6 +723,8 @@
                 align-self: stretch;
                 column-gap: 10px;
                 padding-top: 12px;
+                flex-wrap: wrap;
+                gap: 10px;
 
                 .spotify {
                   flex-shrink: 0;
