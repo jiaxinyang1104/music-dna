@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import LoadingGuard from '../components/LoadingGuard';
 import Toast from '../components/Toast';
+import { extractUrls, fetchNeteasePlaylist } from '../utils/neteaseUtils';
 import styles from './Import.module.scss';
 
 const FORMAT_RE = /歌名:.*歌手:/;
@@ -15,6 +16,7 @@ const Import = () => {
   const [isValid, setIsValid] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const [fetching, setFetching] = useState(false);
   const currentTime = useCurrentTime();
 
   useLayoutEffect(() => {
@@ -26,6 +28,11 @@ const Import = () => {
   if (!location.state?.nickname) {
     return <LoadingGuard />;
   }
+
+  const isUrlInput = (text) => {
+    const urls = extractUrls(text);
+    return urls.length > 0;
+  };
 
   const parseSongs = (text) => {
     return text
@@ -39,17 +46,48 @@ const Import = () => {
       .filter(s => s.name);
   };
 
+  const tryFetchFromUrl = async (text) => {
+    const urls = extractUrls(text);
+    if (urls.length === 0) return null;
+    const url = urls[0].url;
+    setFetching(true);
+    setToastMessage('正在获取歌单…');
+    setToastVisible(true);
+    try {
+      const songs = await fetchNeteasePlaylist(url);
+      if (songs && songs.length > 0) {
+        setToastMessage(`获取成功！共 ${songs.length} 首歌`);
+        setToastVisible(true);
+        setFetching(false);
+        setTimeout(() => {
+          navigate('/quiz', { state: { songs, nickname, playlistText: text } });
+        }, 600);
+        return songs;
+      }
+    } catch {
+    }
+    setFetching(false);
+    setToastMessage('获取歌单失败，请检查链接或手动导入');
+    setToastVisible(true);
+    return null;
+  };
+
   const handleImport = async () => {
     try {
       const text = await navigator.clipboard.readText();
       setInputValue(text);
       if (FORMAT_RE.test(text)) {
         setIsValid(true);
-      } else {
-        setIsValid(false);
-        setToastMessage('歌单 ID 格式不对，请根据下方操作指引导入哦～');
-        setToastVisible(true);
+        return;
       }
+      const urls = extractUrls(text);
+      if (urls.length > 0) {
+        setIsValid(true);
+        return;
+      }
+      setIsValid(false);
+      setToastMessage('未检测到有效歌单格式，试试手动粘贴分享链接吧～');
+      setToastVisible(true);
     } catch {
       setToastMessage('读取剪贴板失败，请手动粘贴');
       setToastVisible(true);
@@ -59,19 +97,23 @@ const Import = () => {
   const handleInputChange = (e) => {
     const val = e.target.value;
     setInputValue(val);
-    setIsValid(FORMAT_RE.test(val));
+    setIsValid(FORMAT_RE.test(val) || isUrlInput(val));
   };
 
-  const handleAnalyze = useCallback(() => {
-    if (!isValid || !inputValue) return;
+  const handleAnalyze = useCallback(async () => {
+    if (!isValid || !inputValue || fetching) return;
+
+    const urlSongs = await tryFetchFromUrl(inputValue);
+    if (urlSongs) return;
+
     const songs = parseSongs(inputValue);
     if (songs.length === 0) {
-      setToastMessage('未识别到有效歌单，请检查格式');
+      setToastMessage('未识别到有效歌单，请粘贴网易云分享链接');
       setToastVisible(true);
       return;
     }
     navigate('/quiz', { state: { songs, nickname, playlistText: inputValue } });
-  }, [isValid, inputValue, navigate, nickname]);
+  }, [isValid, inputValue, fetching, navigate, nickname]);
 
   return (
     <div className={styles.frame6}>
@@ -96,10 +138,10 @@ const Import = () => {
           <div className={styles.frame4}>
             <div className={styles.buttonMargin}>
               <div
-                className={`${styles.button} ${isValid ? styles.buttonEnabled : ''}`}
+                className={`${styles.button} ${isValid && !fetching ? styles.buttonEnabled : ''}`}
                 onClick={handleAnalyze}
               >
-                <p className={styles.text}>开始分析</p>
+                <p className={styles.text}>{fetching ? '获取中…' : '开始分析'}</p>
                 <img src="./assets/mq0689ht-xipj7b0.svg" className={styles.icon} alt="" />
               </div>
             </div>
@@ -157,7 +199,7 @@ const Import = () => {
                     </div>
                     <div className={styles.app2}>
                       <div className={styles.container8} />
-                      <p className={styles.text13}>或手动粘贴链接</p>
+                      <p className={styles.text13}>支持链接和文本</p>
                       <div className={styles.container8} />
                     </div>
                     <div className={styles.textInput}>
@@ -184,11 +226,11 @@ const Import = () => {
                             </span>
                             <span className={styles.text16}>红心歌单</span>
                             <span className={styles.text15}>
-                              &nbsp;→ 点击右上角&nbsp;
+                              &nbsp;→ 分享&nbsp;
                             </span>
-                            <span className={styles.text16}>···</span>
+                            <span className={styles.text16}>复制链接</span>
                             <span className={styles.text15}>
-                              &nbsp;→ 复制分享链接
+                              &nbsp;→ 粘贴到此处
                             </span>
                           </p>
                         </div>
