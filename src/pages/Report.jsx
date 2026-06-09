@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useLayoutEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import ShareModal from '../components/ShareModal';
@@ -45,7 +45,7 @@ const Report = () => {
   const [showShare, setShowShare] = useState(false);
   const currentTime = useCurrentTime();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!location.state?.incomeText) {
       navigate('/', { replace: true });
     }

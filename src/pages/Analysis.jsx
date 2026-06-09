@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import { motion, AnimatePresence } from 'motion/react';
@@ -191,7 +191,7 @@ const Analysis = () => {
   const location = useLocation();
   const resultState = location.state || {};
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!location.state?.incomeText) {
       navigate('/', { replace: true });
     }

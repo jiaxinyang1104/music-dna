@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useLayoutEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import { analyzePlaylistStyle, computeScores, getResultTexts, getRandomQuote } from '../utils/scoreUtils';
@@ -107,7 +107,7 @@ const Quiz = () => {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!location.state?.songs || location.state.songs.length === 0) {
       navigate('/', { replace: true });
     }

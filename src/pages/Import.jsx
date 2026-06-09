@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useLayoutEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import Toast from '../components/Toast';
@@ -16,7 +16,7 @@ const Import = () => {
   const [toastMessage, setToastMessage] = useState('');
   const currentTime = useCurrentTime();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!location.state?.nickname) {
       navigate('/', { replace: true });
     }
