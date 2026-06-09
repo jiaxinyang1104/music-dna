@@ -25,18 +25,4 @@ body {
   max-width: 393px;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-img, svg {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 393px) {
-  #root {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }

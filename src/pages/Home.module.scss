@@ -19,8 +19,6 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-wrap: break-word;
-  word-break: break-word;
 
   .autoWrapper {
     position: absolute;
@@ -358,7 +356,7 @@
       padding-bottom: 37px;
 
       .header {
-        max-width: 100%;
+        width: 333px;
         line-height: 18px;
         letter-spacing: 1.2px;
         color: #ffffff61;
@@ -498,8 +496,7 @@
             inset 0px 1px 2px 0px #ffffff, 0px 0px 15px 0px #ffffff33,
             0px 0px 2px 0px #ffffff80;
           padding: 18px;
-          width: 100%;
-          max-width: 333px;
+          width: 333px;
           background-image: linear-gradient(
             180deg,
             #6be1e4 -5.55%,
@@ -547,7 +544,7 @@
       .description3 {
         flex-shrink: 0;
         padding: 28px 0px 0px;
-        max-width: 100%;
+        width: 333px;
         height: 48px;
         text-align: center;
         line-height: 20px;
@@ -578,8 +575,7 @@
       margin-top: 62px;
       width: 100%;
       max-width: 393px;
-      height: auto;
-      min-height: 100px;
+      height: 100px;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -606,7 +602,8 @@
         flex-shrink: 0;
         align-items: center;
         padding-top: 1px;
-        max-width: 100%;
+        width: 167px;
+        height: 17px;
 
         .privacyNote {
           line-height: 17px;
@@ -630,9 +627,9 @@
 
 @keyframes spin {
   from {
-    transform: rotate(-89deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(271deg);
+    transform: rotate(360deg);
   }
 }

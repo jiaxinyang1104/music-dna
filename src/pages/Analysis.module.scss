@@ -1,17 +1,15 @@
 .frame {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #060710;
-          width: 100%;
-          max-width: 393px;
-          min-height: 100vh;
-          min-height: 100dvh;
-          height: auto;
-          border-radius: 55px;
-          box-shadow: 0px 0px 0px 1px #ffffff0f, 0px 0px 0px 10px #13141f,
-            0px 0px 0px 11px #ffffff0a, 0px 60px 120px 0px #000000e5;
-          overflow: hidden;
-          overflow-wrap: break-word;
-          word-break: break-word;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #060710;
+  width: 100%;
+  max-width: 393px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
+  border-radius: 55px;
+  box-shadow: 0px 0px 0px 1px #ffffff0f, 0px 0px 0px 10px #13141f,
+    0px 0px 0px 11px #ffffff0a, 0px 60px 120px 0px #000000e5;
+  overflow: hidden;
+}

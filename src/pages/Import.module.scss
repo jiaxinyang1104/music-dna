@@ -20,8 +20,6 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-wrap: break-word;
-  word-break: break-word;
 
   .autoWrapper {
     position: absolute;
@@ -196,9 +194,7 @@
 
             .text {
               flex-shrink: 0;
-              padding: 0px 10px;
-              width: 92px;
-              text-align: center;
+              white-space: nowrap;
               line-height: 24px;
               letter-spacing: -0.2px;
               color: #ffffff33;
@@ -239,6 +235,8 @@
             flex-shrink: 0;
             align-items: center;
             padding-bottom: 1px;
+            width: 173px;
+            height: 17px;
 
             .text2 {
               line-height: 17px;
@@ -246,6 +244,7 @@
               color: #ffffff38;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 12px;
+              white-space: nowrap;
             }
           }
         }
@@ -345,7 +344,8 @@
             .text8 {
               flex-shrink: 0;
               padding: 10px 0px 0px;
-              max-width: 100%;
+              width: 349px;
+              height: 31px;
               line-height: 21px;
               letter-spacing: 0.05px;
               color: #ffffff6b;
@@ -417,8 +417,7 @@
                 border-radius: 28px;
                 background: #ffffff0d;
                 padding: 21px 19px;
-                width: 100%;
-                max-width: 349px;
+                width: 349px;
                 height: 352px;
                 overflow: hidden;
 
@@ -656,16 +655,15 @@
 
                     .paragraph {
                       display: flex;
-                      flex-shrink: 0;
+                      flex: 1;
                       align-items: center;
                       padding-bottom: 1px;
-                      height: 41px;
 
                       .text17 {
-                        max-width: 100%;
+                        flex: 1;
                         line-height: 21px;
                         letter-spacing: 0;
-                        color: #000000;
+                        color: #ffffff52;
                         font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
                         font-size: 13px;
 
@@ -700,8 +698,7 @@
               align-items: flex-start;
               padding-top: 14px;
               padding-bottom: 30px;
-              width: 100%;
-              max-width: 349px;
+              width: 349px;
               height: 133px;
 
               .text18 {
@@ -720,15 +717,15 @@
                 flex-shrink: 0;
                 align-items: flex-start;
                 align-self: stretch;
-                column-gap: 10px;
-                padding-top: 12px;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 8px 10px;
+                padding-top: 12px;
 
                 .spotify {
                   flex-shrink: 0;
+                  flex-grow: 1;
                   padding: 7px 0px 0px;
-                  width: 92px;
+                  min-width: 80px;
                   height: 24px;
                   text-align: center;
                   line-height: 17px;
@@ -748,7 +745,8 @@
                   border-radius: 18px;
                   background: #ffffff08;
                   padding: 12px 7px;
-                  width: 110px;
+                  flex: 1;
+                  min-width: 100px;
 
                   .containerMargin2 {
                     display: flex;
@@ -777,7 +775,8 @@
                   border-radius: 18px;
                   background: #ffffff08;
                   padding: 12px 7px;
-                  width: 110px;
+                  flex: 1;
+                  min-width: 100px;
 
                   .containerMargin3 {
                     display: flex;
@@ -806,7 +805,8 @@
                   border-radius: 18px;
                   background: #ffffff08;
                   padding: 12px 7px;
-                  width: 110px;
+                  flex: 1;
+                  min-width: 100px;
 
                   .containerMargin4 {
                     display: flex;

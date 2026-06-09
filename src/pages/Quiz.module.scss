@@ -20,8 +20,6 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-wrap: break-word;
-  word-break: break-word;
 
   .container {
     position: absolute;
@@ -117,7 +115,7 @@
       column-gap: 2px;
       padding-top: 6px;
       padding-bottom: 6px;
-      max-width: 100%;
+      width: 349px;
       overflow: hidden;
       cursor: pointer;
 
@@ -207,7 +205,7 @@
           align-items: flex-start;
           border-radius: 3px;
           background: #ffffff12;
-          width: 100%;
+          width: 349px;
           overflow: hidden;
 
           .progressFill {
@@ -262,7 +260,7 @@
           flex-shrink: 0;
           align-items: flex-start;
           align-self: stretch;
-          padding: 2px 258px 16px 0px;
+          padding-bottom: 16px;
 
           .container6 {
             display: inline-flex;
@@ -302,7 +300,7 @@
 
         .text7 {
           flex-shrink: 0;
-          max-width: 100%;
+          width: 307px;
           line-height: 28px;
           letter-spacing: -0.5px;
           color: #ffffff;
@@ -314,7 +312,8 @@
         .text8 {
           flex-shrink: 0;
           padding: 6px 0px 0px;
-          max-width: 100%;
+          width: 307px;
+          height: 26px;
           line-height: 20px;
           letter-spacing: 0.1px;
           color: #ffffff59;
@@ -348,6 +347,7 @@
               color: #ffffffa6;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 14px;
+              white-space: nowrap;
             }
           }
 
