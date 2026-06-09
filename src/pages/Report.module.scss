@@ -12,9 +12,12 @@
     0px 0px 0px 11px #ffffff0a, 0px 60px 140px 0px #000000eb;
   background: #080a1a;
   padding-top: 190px;
-  width: 393px;
-  height: 852px;
-  overflow: hidden;
+  width: 100%;
+  max-width: 393px;
+  min-height: 100dvh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   .autoWrapper2 {
     position: absolute;
@@ -65,7 +68,8 @@
           justify-content: space-between;
           padding-right: 26px;
           padding-left: 32px;
-          width: 393px;
+          width: 100%;
+          max-width: 393px;
           height: 59px;
 
           .text {
@@ -161,7 +165,8 @@
           align-items: flex-start;
           justify-content: space-between;
           padding: 6px 20px 16px 24px;
-          width: 393px;
+          width: 100%;
+          max-width: 393px;
           height: 120px;
 
           .container6 {
@@ -495,7 +500,8 @@
       justify-content: space-between;
       padding-right: 26px;
       padding-left: 32px;
-      width: 393px;
+      width: 100%;
+      max-width: 393px;
       height: 59px;
 
       .timeArea {
