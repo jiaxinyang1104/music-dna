@@ -492,13 +492,13 @@
           align-items: center;
           justify-content: center;
           column-gap: 8px;
+          align-self: stretch;
           border-radius: 22px;
           box-shadow: inset 0px 15px 30px 0px #ffffff40,
             inset 0px 1px 2px 0px #ffffff, 0px 0px 15px 0px #ffffff33,
             0px 0px 2px 0px #ffffff80;
           padding: 18px;
           width: 100%;
-          max-width: 333px;
           background-image: linear-gradient(
             180deg,
             #6be1e4 -5.55%,

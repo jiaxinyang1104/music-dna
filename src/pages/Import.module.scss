@@ -498,7 +498,7 @@
                   padding-top: 32px;
 
                   .container7 {
-                    display: inline-flex;
+                    display: flex;
                     flex-shrink: 0;
                     align-items: center;
                     align-self: stretch;
@@ -541,13 +541,14 @@
                       flex-shrink: 0;
                       align-items: flex-start;
                       padding-bottom: 1px;
-                      width: 95px;
                       height: 24px;
+                      white-space: nowrap;
 
                       .text11 {
                         margin: -1px 0px 0px;
                         line-height: 24px;
                         letter-spacing: -0.2px;
+                        white-space: nowrap;
                         color: #ffffff;
                         font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
                         font-size: 16px;
