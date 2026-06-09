@@ -20,6 +20,8 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   .autoWrapper {
     position: absolute;
@@ -197,7 +199,6 @@
               padding: 0px 10px;
               width: 92px;
               text-align: center;
-              white-space: nowrap;
               line-height: 24px;
               letter-spacing: -0.2px;
               color: #ffffff33;
@@ -245,7 +246,6 @@
               color: #ffffff38;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 12px;
-              white-space: nowrap;
             }
           }
         }
@@ -351,7 +351,6 @@
               color: #ffffff6b;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 14px;
-              white-space: nowrap;
             }
           }
 

@@ -19,6 +19,8 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   .autoWrapper {
     position: absolute;
@@ -364,7 +366,6 @@
         font-size: 12px;
         font-weight: 500;
         text-transform: UPPERCASE;
-        white-space: nowrap;
       }
 
       .content {
@@ -613,7 +614,6 @@
           color: #ffffff33;
           font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
           font-size: 11px;
-          white-space: nowrap;
         }
       }
     }

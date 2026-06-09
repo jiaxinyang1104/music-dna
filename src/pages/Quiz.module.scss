@@ -20,6 +20,8 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   .container {
     position: absolute;
@@ -346,7 +348,6 @@
               color: #ffffffa6;
               font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
               font-size: 14px;
-              white-space: nowrap;
             }
           }
 

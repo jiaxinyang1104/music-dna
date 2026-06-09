@@ -19,6 +19,8 @@
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   .autoWrapper2 {
     position: absolute;
@@ -1060,7 +1062,7 @@
                 display: flex;
                 flex-shrink: 0;
                 align-items: center;
-                white-space: nowrap;
+                white-space: normal;
                 height: 17px;
 
                 .text18 {
@@ -1246,7 +1248,6 @@
         font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
         font-size: 14px;
         font-weight: 500;
-        white-space: nowrap;
       }
 
       .container27 {
