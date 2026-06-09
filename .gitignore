@@ -2,3 +2,5 @@ node_modules
 dist
 .DS_Store
 *.log
+.figma
+极简主义移动应用设计*
