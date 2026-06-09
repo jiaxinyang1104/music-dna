@@ -408,10 +408,11 @@
         padding-top: 34px;
 
         .container4 {
-          display: inline-flex;
+          display: flex;
           flex-shrink: 0;
           align-items: center;
           column-gap: 14px;
+          align-self: stretch;
           width: 100%;
           border: 2px solid #6af1f4cc;
           border-radius: 20px;
@@ -442,8 +443,9 @@
 
           .textInput {
             display: flex;
+            flex: 1;
             flex-direction: column;
-            flex-shrink: 0;
+            min-width: 0;
             align-items: flex-start;
             justify-content: center;
             height: 24px;
