@@ -107,7 +107,7 @@ const Quiz = () => {
   const [answers, setAnswers] = useState({});
 
   const question = questions[current];
-  const selected = answers[current] || (question.type === 'multi' ? [] : '');
+  const selected = answers[current] ?? (question.type === 'multi' ? [] : '');
 
   const toggleMulti = (idx) => {
     setAnswers((prev) => {
@@ -162,15 +162,15 @@ const Quiz = () => {
           <p className={styles.aTime}>9:41</p>
         </div>
         <div className={styles.signalWifiBattery}>
-          <img src="/assets/mq0689hc-adnnwdo.svg" className={styles.iconMobileSignal} alt="" />
-          <img src="/assets/mq0689hc-pjxumio.svg" className={styles.wifi} alt="" />
-          <img src="/assets/mq0689hc-qss037y.svg" className={styles.aStatusBarBattery} alt="" />
+          <img src="./assets/mq0689hc-adnnwdo.svg" className={styles.iconMobileSignal} alt="" />
+          <img src="./assets/mq0689hc-pjxumio.svg" className={styles.wifi} alt="" />
+          <img src="./assets/mq0689hc-qss037y.svg" className={styles.aStatusBarBattery} alt="" />
         </div>
         <div className={styles.frame} />
       </div>
       <div className={styles.container9}>
         <div className={styles.button} onClick={() => navigate('/import', { state: { songs, nickname } })}>
-          <img src="/assets/mq0689hc-5ffylaq.svg" className={styles.icon} alt="" />
+          <img src="./assets/mq0689hc-5ffylaq.svg" className={styles.icon} alt="" />
         </div>
         <div className={styles.progressBar}>
           <div className={styles.container2}>
@@ -219,7 +219,7 @@ const Quiz = () => {
       </div>
       <div className={styles.frame3}>
         <div className={styles.container10}>
-          <img src="/assets/mq0689hc-tjnd61u.png" className={styles.icon2} alt="" />
+          <img src="./assets/mq0689hc-tjnd61u.png" className={styles.icon2} alt="" />
         </div>
         <div className={styles.icon3}>
           <div className={styles.vector} />
@@ -227,9 +227,9 @@ const Quiz = () => {
         <div className={styles.icon4}>
           <div className={styles.vector2} />
         </div>
-        <img src="/assets/mq0689hc-e0mc9bj.png" className={styles.icon5} alt="" />
-        <img src="/assets/mq0689hc-542xei3.png" className={styles.icon6} alt="" />
-        <img src="/assets/mq0689hc-hw83dud.png" className={styles.icon7} alt="" />
+        <img src="./assets/mq0689hc-e0mc9bj.png" className={styles.icon5} alt="" />
+        <img src="./assets/mq0689hc-542xei3.png" className={styles.icon6} alt="" />
+        <img src="./assets/mq0689hc-hw83dud.png" className={styles.icon7} alt="" />
         <div className={styles.vector5}>
           <div className={styles.vector3} />
           <div className={styles.vector4} />
@@ -237,15 +237,15 @@ const Quiz = () => {
         <div className={styles.icon8}>
           <div className={styles.vector6} />
         </div>
-        <img src="/assets/mq0689hc-0jcapk9.png" className={styles.icon9} alt="" />
-        <img src="/assets/mq0689hc-gsyv9ah.png" className={styles.icon10} alt="" />
+        <img src="./assets/mq0689hc-0jcapk9.png" className={styles.icon9} alt="" />
+        <img src="./assets/mq0689hc-gsyv9ah.png" className={styles.icon10} alt="" />
       </div>
       <div className={styles.container11}>
         <div
           className={`${styles.button5} ${current === 0 ? styles.buttonHidden : ''}`}
           onClick={() => current > 0 && setCurrent((c) => c - 1)}
         >
-          <img src="/assets/mq0689hc-ginssxr.svg" className={styles.icon11} alt="" />
+          <img src="./assets/mq0689hc-ginssxr.svg" className={styles.icon11} alt="" />
           <p className={styles.text10}>上一题</p>
         </div>
         <div
@@ -253,17 +253,17 @@ const Quiz = () => {
           onClick={handleNext}
         >
           <p className={styles.text11}>{current < questions.length - 1 ? '下一题' : '查看结果'}</p>
-          <img src="/assets/mq0689hc-ti9zvy8.svg" className={styles.icon11} alt="" />
+          <img src="./assets/mq0689hc-ti9zvy8.svg" className={styles.icon11} alt="" />
         </div>
       </div>
       <div className={styles.frame4} />
       <div className={styles.frame5} />
       <div className={styles.group1}>
-        <img src="/assets/mq0689hc-2ht4lkz.svg" className={styles.icon12} alt="" />
-        <img src="/assets/mq0689hc-clugmdq.svg" className={styles.icon13} alt="" />
-        <img src="/assets/mq0689hc-ori44u8.svg" className={styles.icon14} alt="" />
-        <img src="/assets/mq0689hc-91ctes0.svg" className={styles.icon15} alt="" />
-        <img src="/assets/mq0689hc-gbj9msg.svg" className={styles.icon16} alt="" />
+        <img src="./assets/mq0689hc-2ht4lkz.svg" className={styles.icon12} alt="" />
+        <img src="./assets/mq0689hc-clugmdq.svg" className={styles.icon13} alt="" />
+        <img src="./assets/mq0689hc-ori44u8.svg" className={styles.icon14} alt="" />
+        <img src="./assets/mq0689hc-91ctes0.svg" className={styles.icon15} alt="" />
+        <img src="./assets/mq0689hc-gbj9msg.svg" className={styles.icon16} alt="" />
       </div>
     </div>
   );

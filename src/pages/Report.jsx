@@ -47,7 +47,7 @@ const Report = () => {
     <div className={styles.frame}>
       <div className={styles.autoWrapper2}>
         <div className={styles.container10}>
-          <img src="/assets/mq0689ib-5nftwkj.svg" className={styles.icon} alt="" />
+          <img src="./assets/mq0689ib-5nftwkj.svg" className={styles.icon} alt="" />
           <div className={styles.autoWrapper}>
             <div className={styles.container} />
             <div className={styles.container4}>
@@ -62,7 +62,7 @@ const Report = () => {
                   <div className={styles.vector3} />
                   <div className={styles.vector4} />
                 </div>
-                <img src="/assets/mq0689ib-akxbqfc.svg" className={styles.icon3} alt="" />
+                <img src="./assets/mq0689ib-akxbqfc.svg" className={styles.icon3} alt="" />
               </div>
             </div>
             <div className={styles.container9}>
@@ -104,10 +104,10 @@ const Report = () => {
                   <div className={styles.icon9}>
                     <div className={styles.vector15} />
                   </div>
-                  <img src="/assets/mq0689ib-dircsvh.png" className={styles.icon10} alt="" />
-                  <img src="/assets/mq0689ib-cuidblc.png" className={styles.icon11} alt="" />
-                  <img src="/assets/mq0689ib-39eg8c0.png" className={styles.icon12} alt="" />
-                  <img src="/assets/mq0689ib-xtxokq1.png" className={styles.icon13} alt="" />
+                  <img src="./assets/mq0689ib-dircsvh.png" className={styles.icon10} alt="" />
+                  <img src="./assets/mq0689ib-cuidblc.png" className={styles.icon11} alt="" />
+                  <img src="./assets/mq0689ib-39eg8c0.png" className={styles.icon12} alt="" />
+                  <img src="./assets/mq0689ib-xtxokq1.png" className={styles.icon13} alt="" />
                   <div className={styles.paragraph}>
                     <p className={styles.a}>♪</p>
                   </div>
@@ -117,12 +117,12 @@ const Report = () => {
           </div>
         </div>
         <div className={styles.container11}>
-          <img src="/assets/mq0689ib-a5bhxnk.svg" className={styles.icon14} alt="" />
+          <img src="./assets/mq0689ib-a5bhxnk.svg" className={styles.icon14} alt="" />
         </div>
         <div className={styles.container12}>
-          <img src="/assets/mq0689ib-5bh31ao.svg" className={styles.icon15} alt="" />
+          <img src="./assets/mq0689ib-5bh31ao.svg" className={styles.icon15} alt="" />
         </div>
-        <img src="/assets/mq0689ib-i3qq39i.svg" className={styles.icon16} alt="" />
+        <img src="./assets/mq0689ib-i3qq39i.svg" className={styles.icon16} alt="" />
       </div>
       <div className={styles.headerOverlay}>
         <div className={styles.statusBar}>
@@ -137,7 +137,7 @@ const Report = () => {
               <div className={styles.bar3} />
               <div className={styles.bar4} />
             </div>
-            <img src="/assets/mq0689ib-akxbqfc.svg" className={styles.wifiIcon} alt="" />
+            <img src="./assets/mq0689ib-akxbqfc.svg" className={styles.wifiIcon} alt="" />
           </div>
         </div>
         <div className={styles.titleSection}>
@@ -150,7 +150,7 @@ const Report = () => {
       </div>
       <div className={styles.autoWrapper5}>
         <div className={styles.container26}>
-          <img src="/assets/mq0689ib-9fcufpl.svg" className={styles.icon17} alt="" />
+          <img src="./assets/mq0689ib-9fcufpl.svg" className={styles.icon17} alt="" />
           <div className={styles.autoWrapper4}>
 
             <div className={styles.container17}>

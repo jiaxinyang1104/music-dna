@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         <div className={styles.frame2}>
           <div className={styles.container2}>
-            <img src="/assets/mq06jgv4-ceh9wot.png" className={styles.icon} alt="" />
+            <img src="./assets/mq06jgv4-ceh9wot.png" className={styles.icon} alt="" />
           </div>
           <div className={styles.icon2}>
             <div className={styles.vector} />
@@ -28,9 +28,9 @@ const Home = () => {
           <div className={styles.icon3}>
             <div className={styles.vector2} />
           </div>
-          <img src="/assets/mq06jgv4-4q7jtpi.png" className={styles.icon4} alt="" />
-          <img src="/assets/mq06jgv4-asxn2v6.png" className={styles.icon5} alt="" />
-          <img src="/assets/mq06jgv4-vrxwff1.png" className={styles.icon6} alt="" />
+          <img src="./assets/mq06jgv4-4q7jtpi.png" className={styles.icon4} alt="" />
+          <img src="./assets/mq06jgv4-asxn2v6.png" className={styles.icon5} alt="" />
+          <img src="./assets/mq06jgv4-vrxwff1.png" className={styles.icon6} alt="" />
           <div className={styles.vector5}>
             <div className={styles.vector3} />
             <div className={styles.vector4} />
@@ -38,8 +38,8 @@ const Home = () => {
           <div className={styles.icon7}>
             <div className={styles.vector6} />
           </div>
-          <img src="/assets/mq06jgv4-w2akpic.png" className={styles.icon8} alt="" />
-          <img src="/assets/mq06jgv4-x7quzac.png" className={styles.icon9} alt="" />
+          <img src="./assets/mq06jgv4-w2akpic.png" className={styles.icon8} alt="" />
+          <img src="./assets/mq06jgv4-x7quzac.png" className={styles.icon9} alt="" />
         </div>
       </div>
       <div className={styles.autoWrapper3}>
@@ -51,9 +51,9 @@ const Home = () => {
             <div className={styles.frame3} />
           </div>
           <div className={styles.signalWifiBattery}>
-            <img src="/assets/mq06jguv-yyds98h.svg" className={styles.iconMobileSignal} alt="" />
-            <img src="/assets/mq06jguv-dg1lrsc.svg" className={styles.wifi} alt="" />
-            <img src="/assets/mq06jguv-2axtvnx.svg" className={styles.aStatusBarBattery} alt="" />
+            <img src="./assets/mq06jguv-yyds98h.svg" className={styles.iconMobileSignal} alt="" />
+            <img src="./assets/mq06jguv-dg1lrsc.svg" className={styles.wifi} alt="" />
+            <img src="./assets/mq06jguv-2axtvnx.svg" className={styles.aStatusBarBattery} alt="" />
           </div>
         </div>
         <div className={styles.frame5}>
@@ -64,14 +64,14 @@ const Home = () => {
               <br />
               你的音乐人生
             </p>
-            <img src="/assets/mq06jh3a-9907xwx.svg" className={styles.glowingHeart} alt="" />
+            <img src="./assets/mq06jh3a-9907xwx.svg" className={styles.glowingHeart} alt="" />
           </div>
         </div>
         <div className={styles.container5}>
           <div className={styles.containerMargin}>
             <div className={styles.container4}>
               <div className={styles.container3}>
-                <img src="/assets/mq06jh3t-lex6exw.svg" className={styles.icon10} alt="" />
+                <img src="./assets/mq06jh3t-lex6exw.svg" className={styles.icon10} alt="" />
               </div>
               <div className={styles.textInput}>
                 <input
@@ -104,9 +104,9 @@ const Home = () => {
             <span className={styles.description}>&nbsp;人测试过 ✨</span>
           </p>
         </div>
-        <img src="/assets/mq06jh3j-qdyvmdd.svg" className={styles.musicalStaff} alt="" />
+        <img src="./assets/mq06jh3j-qdyvmdd.svg" className={styles.musicalStaff} alt="" />
         <div className={styles.frame6}>
-          <img src="/assets/mq0689gy-x6lmu2w.svg" className={styles.icon11} alt="" />
+          <img src="./assets/mq0689gy-x6lmu2w.svg" className={styles.icon11} alt="" />
           <div className={styles.text4}>
             <p className={styles.privacyNote}>歌单仅在本地分析，不上传服务器</p>
           </div>

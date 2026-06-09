@@ -72,9 +72,9 @@ const Import = () => {
             <p className={styles.aTime}>9:41</p>
           </div>
           <div className={styles.signalWifiBattery}>
-            <img src="/assets/mq0689ht-k9djkfs.svg" className={styles.iconMobileSignal} alt="" />
-            <img src="/assets/mq0689ht-xwuic2p.svg" className={styles.wifi} alt="" />
-            <img src="/assets/mq0689ht-yu3h638.svg" className={styles.aStatusBarBattery} alt="" />
+            <img src="./assets/mq0689ht-k9djkfs.svg" className={styles.iconMobileSignal} alt="" />
+            <img src="./assets/mq0689ht-xwuic2p.svg" className={styles.wifi} alt="" />
+            <img src="./assets/mq0689ht-yu3h638.svg" className={styles.aStatusBarBattery} alt="" />
           </div>
           <div className={styles.frame} />
         </div>
@@ -87,11 +87,11 @@ const Import = () => {
                 onClick={handleAnalyze}
               >
                 <p className={styles.text}>开始分析</p>
-                <img src="/assets/mq0689ht-xipj7b0.svg" className={styles.icon} alt="" />
+                <img src="./assets/mq0689ht-xipj7b0.svg" className={styles.icon} alt="" />
               </div>
             </div>
             <div className={styles.container3}>
-              <img src="/assets/mq0689ht-ad3j7bc.svg" className={styles.icon2} alt="" />
+              <img src="./assets/mq0689ht-ad3j7bc.svg" className={styles.icon2} alt="" />
               <div className={styles.text3}>
                 <p className={styles.text2}>歌单仅在本地分析，不上传服务器</p>
               </div>
@@ -100,7 +100,7 @@ const Import = () => {
           <div className={styles.container17}>
             <div className={styles.autoWrapper4}>
               <div className={styles.button2} onClick={() => navigate('/')}>
-                <img src="/assets/mq0689ht-7e6cns9.svg" className={styles.icon3} alt="" />
+                <img src="./assets/mq0689ht-7e6cns9.svg" className={styles.icon3} alt="" />
               </div>
               <div className={styles.container4}>
                 <div className={styles.heading1}>
@@ -115,15 +115,15 @@ const Import = () => {
               </div>
               <div className={styles.autoWrapper3}>
                 <div className={styles.frame5}>
-                  <img src="/assets/mq0689ht-ye0nwj7.svg" className={styles.icon4} alt="" />
-                  <img src="/assets/mq0689ht-13n1pe7.svg" className={styles.icon5} alt="" />
-                  <img src="/assets/mq0689ht-5wc3z99.svg" className={styles.icon6} alt="" />
+                  <img src="./assets/mq0689ht-ye0nwj7.svg" className={styles.icon4} alt="" />
+                  <img src="./assets/mq0689ht-13n1pe7.svg" className={styles.icon5} alt="" />
+                  <img src="./assets/mq0689ht-5wc3z99.svg" className={styles.icon6} alt="" />
                 </div>
                 <div className={styles.containerMargin}>
                   <div className={styles.glassCard}>
                     <div className={styles.app}>
                       <div className={styles.container5}>
-                        <img src="/assets/mq0689ht-3todomr.svg" className={styles.icon7} alt="" />
+                        <img src="./assets/mq0689ht-3todomr.svg" className={styles.icon7} alt="" />
                       </div>
                       <div className={styles.container6}>
                         <p className={styles.text9}>网易云音乐</p>
@@ -162,7 +162,7 @@ const Import = () => {
                     <div className={styles.appMargin}>
                       <div className={styles.app3}>
                         <div className={styles.iconMargin}>
-                          <img src="/assets/mq0689ht-sofd202.svg" className={styles.icon8} alt="" />
+                          <img src="./assets/mq0689ht-sofd202.svg" className={styles.icon8} alt="" />
                         </div>
                         <div className={styles.paragraph}>
                           <p className={styles.text17}>
@@ -210,13 +210,13 @@ const Import = () => {
             </div>
           </div>
           <div className={styles.autoWrapper5}>
-            <img src="/assets/mq0689ht-sko6d2c.svg" className={styles.icon9} alt="" />
-            <img src="/assets/mq0689ht-mpbwdup.svg" className={styles.icon10} alt="" />
+            <img src="./assets/mq0689ht-sko6d2c.svg" className={styles.icon9} alt="" />
+            <img src="./assets/mq0689ht-mpbwdup.svg" className={styles.icon10} alt="" />
           </div>
-          <img src="/assets/mq0689ht-u70nx4s.svg" className={styles.icon11} alt="" />
+          <img src="./assets/mq0689ht-u70nx4s.svg" className={styles.icon11} alt="" />
           <div className={styles.autoWrapper6}>
-            <img src="/assets/mq0689ht-g8fpz2r.svg" className={styles.icon9} alt="" />
-            <img src="/assets/mq0689ht-2pravoy.svg" className={styles.icon12} alt="" />
+            <img src="./assets/mq0689ht-g8fpz2r.svg" className={styles.icon9} alt="" />
+            <img src="./assets/mq0689ht-2pravoy.svg" className={styles.icon12} alt="" />
           </div>
         </div>
       </div>
