@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
+import LoadingGuard from '../components/LoadingGuard';
 import { analyzePlaylistStyle, computeScores, getResultTexts, getRandomQuote } from '../utils/scoreUtils';
 import styles from './Quiz.module.scss';
 
@@ -114,7 +115,7 @@ const Quiz = () => {
   }, []);
 
   if (!location.state?.songs || location.state.songs.length === 0) {
-    return null;
+    return <LoadingGuard />;
   }
 
   const question = questions[current];

@@ -1,6 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
+import LoadingGuard from '../components/LoadingGuard';
 import { motion, AnimatePresence } from 'motion/react';
 import styles from './Analysis.module.scss';
 
@@ -229,7 +230,7 @@ const Analysis = () => {
   }, [done, navigate, resultState]);
 
   if (!location.state?.incomeText) {
-    return null;
+    return <LoadingGuard />;
   }
 
   return (

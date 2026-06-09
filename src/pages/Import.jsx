@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
+import LoadingGuard from '../components/LoadingGuard';
 import Toast from '../components/Toast';
 import styles from './Import.module.scss';
 
@@ -23,7 +24,7 @@ const Import = () => {
   }, []);
 
   if (!location.state?.nickname) {
-    return null;
+    return <LoadingGuard />;
   }
 
   const parseSongs = (text) => {

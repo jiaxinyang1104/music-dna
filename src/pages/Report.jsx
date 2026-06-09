@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
+import LoadingGuard from '../components/LoadingGuard';
 import ShareModal from '../components/ShareModal';
 import styles from './Report.module.scss';
 
@@ -52,7 +53,7 @@ const Report = () => {
   }, []);
 
   if (!location.state?.incomeText) {
-    return null;
+    return <LoadingGuard />;
   }
 
   return (
