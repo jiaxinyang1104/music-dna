@@ -13,7 +13,7 @@
   background: #080a1a;
   padding-top: 190px;
   width: 100%;
-  max-width: 393px;
+  max-width: 430px;
   min-height: 100vh;
   min-height: 100dvh;
   height: auto;
@@ -699,7 +699,8 @@
         .text12 {
           flex-shrink: 0;
           padding: 12px 0px 0px;
-          width: 323px;
+          width: 100%;
+          max-width: 323px;
           height: 32px;
           line-height: 20px;
           letter-spacing: 0;
@@ -932,7 +933,8 @@
 
               .text9 {
                 flex-shrink: 0;
-                width: 323px;
+                width: 100%;
+                max-width: 323px;
                 line-height: 21px;
                 letter-spacing: 0;
                 color: #ffffff99;
@@ -954,7 +956,8 @@
             0px 6px 32px 0px #00000061;
           background: #ffffff0a;
           padding: 16px 17px 15px;
-          width: 361px;
+          width: 100%;
+          max-width: 361px;
           height: 263px;
           overflow: hidden;
 
@@ -1117,7 +1120,8 @@
             0px 6px 32px 0px #00000061;
           background: #ffffff0a;
           padding: 16px 17px 15px;
-          width: 361px;
+          width: 100%;
+          max-width: 361px;
           height: 220px;
           overflow: hidden;
 
@@ -1213,14 +1217,16 @@
 
       .button2 {
         display: flex;
-        flex-shrink: 0;
-        align-items: flex-start;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #6af1f4b2;
         border-radius: 23px;
         box-shadow: inset 0px 0px 2px 0px #ffffffb2,
           inset 0px 0px 18px 0px #6af1f40d, 0px 0px 22px 0px #6af1f433;
         background: #6af1f412;
-        padding: 9px 98px 12px 99px;
+        padding: 9px 16px 12px;
+        max-width: 245px;
 
         .text25 {
           line-height: 23px;

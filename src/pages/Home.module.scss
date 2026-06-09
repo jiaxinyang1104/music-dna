@@ -13,7 +13,7 @@
   background: linear-gradient(180deg, #1a1a2e 0%, #0d0d14 100%);
   padding-bottom: 10px;
   width: 100%;
-  max-width: 393px;
+  max-width: 430px;
   min-height: 100vh;
   min-height: 100dvh;
   height: auto;
@@ -270,8 +270,6 @@
       align-items: center;
       align-self: stretch;
       justify-content: space-between;
-      margin-right: 1px;
-      margin-left: 1px;
       min-width: 100%;
       height: 53px;
 
@@ -356,7 +354,8 @@
       padding-bottom: 37px;
 
       .header {
-        width: 333px;
+        width: 100%;
+        max-width: 333px;
         line-height: 18px;
         letter-spacing: 1.2px;
         color: #ffffff61;
@@ -496,7 +495,8 @@
             inset 0px 1px 2px 0px #ffffff, 0px 0px 15px 0px #ffffff33,
             0px 0px 2px 0px #ffffff80;
           padding: 18px;
-          width: 333px;
+          width: 100%;
+          max-width: 333px;
           background-image: linear-gradient(
             180deg,
             #6be1e4 -5.55%,
@@ -544,7 +544,8 @@
       .description3 {
         flex-shrink: 0;
         padding: 28px 0px 0px;
-        width: 333px;
+        width: 100%;
+        max-width: 333px;
         height: 48px;
         text-align: center;
         line-height: 20px;

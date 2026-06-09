@@ -14,7 +14,7 @@
   padding-right: 1px;
   padding-bottom: 106px;
   width: 100%;
-  max-width: 393px;
+  max-width: 430px;
   min-height: 100vh;
   min-height: 100dvh;
   height: auto;
@@ -344,7 +344,8 @@
             .text8 {
               flex-shrink: 0;
               padding: 10px 0px 0px;
-              width: 349px;
+              width: 100%;
+              max-width: 349px;
               height: 31px;
               line-height: 21px;
               letter-spacing: 0.05px;
@@ -358,7 +359,8 @@
             position: relative;
             margin-top: 33px;
             margin-left: 6px;
-            width: 336px;
+            width: 100%;
+            max-width: 336px;
             height: 398px;
 
             .frame5 {
@@ -370,7 +372,8 @@
               align-items: flex-start;
               padding-right: 57px;
               padding-bottom: 77px;
-              width: 336px;
+              width: 100%;
+              max-width: 336px;
               height: 398px;
 
               .icon4 {
@@ -405,7 +408,8 @@
               flex-direction: column;
               align-items: flex-start;
               padding-top: 14px;
-              width: 349px;
+              width: 100%;
+              max-width: 349px;
               height: 366px;
 
               .glassCard {
@@ -417,7 +421,8 @@
                 border-radius: 28px;
                 background: #ffffff0d;
                 padding: 21px 19px;
-                width: 349px;
+                width: 100%;
+                max-width: 349px;
                 height: 352px;
                 overflow: hidden;
 
@@ -698,7 +703,8 @@
               align-items: flex-start;
               padding-top: 14px;
               padding-bottom: 30px;
-              width: 349px;
+              width: 100%;
+              max-width: 349px;
               height: 133px;
 
               .text18 {
