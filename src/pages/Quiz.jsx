@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useCurrentTime } from '../hooks/useCurrentTime';
 import { analyzePlaylistStyle, computeScores, getResultTexts, getRandomQuote } from '../utils/scoreUtils';
 import styles from './Quiz.module.scss';
 
@@ -108,6 +109,7 @@ const Quiz = () => {
 
   const question = questions[current];
   const selected = answers[current] ?? (question.type === 'multi' ? [] : '');
+  const currentTime = useCurrentTime();
 
   const toggleMulti = (idx) => {
     setAnswers((prev) => {
@@ -159,7 +161,7 @@ const Quiz = () => {
       <div className={styles.container} />
       <div className={styles.frame2}>
         <div className={styles.aStatusBarTime}>
-          <p className={styles.aTime}>9:41</p>
+          <p className={styles.aTime}>{currentTime}</p>
         </div>
         <div className={styles.signalWifiBattery}>
           <img src="./assets/mq0689hc-adnnwdo.svg" className={styles.iconMobileSignal} alt="" />

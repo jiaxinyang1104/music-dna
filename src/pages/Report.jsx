@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useCurrentTime } from '../hooks/useCurrentTime';
 import ShareModal from '../components/ShareModal';
 import styles from './Report.module.scss';
 
@@ -42,6 +43,7 @@ const Report = () => {
   const [expandedCrash, setExpandedCrash] = useState(false);
   const [expandedLove, setExpandedLove] = useState(false);
   const [showShare, setShowShare] = useState(false);
+  const currentTime = useCurrentTime();
 
   return (
     <div className={styles.frame}>
@@ -52,7 +54,7 @@ const Report = () => {
             <div className={styles.container} />
             <div className={styles.container4}>
               <div className={styles.text}>
-                <p className={styles.a941}>9:41</p>
+                <p className={styles.a941}>{currentTime}</p>
               </div>
               <div className={styles.container2} />
               <div className={styles.container3}>
@@ -127,7 +129,7 @@ const Report = () => {
       <div className={styles.headerOverlay}>
         <div className={styles.statusBar}>
           <div className={styles.timeArea}>
-            <p className={styles.timeText}>9:41</p>
+            <p className={styles.timeText}>{currentTime}</p>
           </div>
           <div className={styles.notch} />
           <div className={styles.statusIconsArea}>

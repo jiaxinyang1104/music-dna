@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useCurrentTime } from '../hooks/useCurrentTime';
 import { motion, AnimatePresence } from 'motion/react';
 import styles from './Analysis.module.scss';
 
@@ -102,10 +103,10 @@ function VinylRecord() {
   );
 }
 
-function StatusBar() {
+function StatusBar({ time }) {
   return (
     <svg width="393" height="59" viewBox="0 0 393 59" fill="none" style={{ fontFamily: FF }}>
-      <text x="33" y="35" fill="white" fontSize="17" fontWeight="600" letterSpacing="-0.4" style={{ fontFamily: FF }}>9:41</text>
+      <text x="33" y="35" fill="white" fontSize="17" fontWeight="600" letterSpacing="-0.4" style={{ fontFamily: FF }}>{time}</text>
       <g transform="translate(276, 20)">
         <rect x="0" y="9" width="2.5" height="4" rx="0.5" fill="white" opacity="0.9" />
         <rect x="4" y="7" width="2.5" height="6" rx="0.5" fill="white" opacity="0.9" />
@@ -193,6 +194,7 @@ const Analysis = () => {
   const [msgIdx, setMsgIdx] = useState(0);
   const [visible, setVisible] = useState(true);
   const [done, setDone] = useState(false);
+  const currentTime = useCurrentTime();
 
   useEffect(() => {
     if (done) return;
@@ -222,7 +224,7 @@ const Analysis = () => {
 
   return (
     <div className={styles.frame}>
-      <div style={{ width: 393, height: 852, borderRadius: 55, background: BG, position: "relative", overflow: "hidden" }}>
+      <div style={{ width: '100%', maxWidth: 393, minHeight: '100dvh', height: 'auto', borderRadius: 55, background: BG, position: "relative", overflow: "hidden", paddingBottom: 10 }}>
 
         <div style={{ position: "absolute", top: -120, left: -80, width: 480, height: 420,
           background: "radial-gradient(ellipse at 45% 10%, rgba(25,55,200,0.42) 0%, rgba(10,20,80,0.18) 50%, transparent 75%)",
@@ -242,7 +244,7 @@ const Analysis = () => {
         <BgNote x={55}  y={740} size={0.5}  color="#5B8DEF" delay={3.2} opacity={0.16} />
 
         <div style={{ height: 59, position: "relative" }}>
-          <StatusBar />
+          <StatusBar time={currentTime} />
           <div style={{ position: "absolute", top: 11, left: "50%", transform: "translateX(-50%)", width: 125, height: 37 }}>
             <DynamicIsland />
           </div>

@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useCurrentTime } from '../hooks/useCurrentTime';
 import Toast from '../components/Toast';
 import styles from './Import.module.scss';
 
@@ -13,6 +14,7 @@ const Import = () => {
   const [isValid, setIsValid] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const currentTime = useCurrentTime();
 
   const parseSongs = (text) => {
     return text
@@ -69,7 +71,7 @@ const Import = () => {
       <div className={styles.autoWrapper8}>
         <div className={styles.frame2}>
           <div className={styles.aStatusBarTime}>
-            <p className={styles.aTime}>9:41</p>
+            <p className={styles.aTime}>{currentTime}</p>
           </div>
           <div className={styles.signalWifiBattery}>
             <img src="./assets/mq0689ht-k9djkfs.svg" className={styles.iconMobileSignal} alt="" />

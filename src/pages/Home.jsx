@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCurrentTime } from '../hooks/useCurrentTime';
 import styles from './Home.module.scss';
 
 const Home = () => {
   const navigate = useNavigate();
   const [nickname, setNickname] = useState('');
   const isValid = nickname.trim().length > 0;
+  const currentTime = useCurrentTime();
 
   return (
     <div className={styles.frame8}>
@@ -46,7 +48,7 @@ const Home = () => {
         <div className={styles.frame4}>
           <div className={styles.autoWrapper2}>
             <div className={styles.aStatusBarTime}>
-              <p className={styles.aTime}>9:41</p>
+              <p className={styles.aTime}>{currentTime}</p>
             </div>
             <div className={styles.frame3} />
           </div>
