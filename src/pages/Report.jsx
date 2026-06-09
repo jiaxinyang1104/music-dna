@@ -51,6 +51,10 @@ const Report = () => {
     }
   }, []);
 
+  if (!location.state?.incomeText) {
+    return null;
+  }
+
   return (
     <div className={styles.frame}>
       <div className={styles.autoWrapper2}>

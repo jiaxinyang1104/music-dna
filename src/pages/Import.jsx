@@ -22,6 +22,10 @@ const Import = () => {
     }
   }, []);
 
+  if (!location.state?.nickname) {
+    return null;
+  }
+
   const parseSongs = (text) => {
     return text
       .split('\n')

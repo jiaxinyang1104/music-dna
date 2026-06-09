@@ -113,6 +113,10 @@ const Quiz = () => {
     }
   }, []);
 
+  if (!location.state?.songs || location.state.songs.length === 0) {
+    return null;
+  }
+
   const question = questions[current];
   const selected = answers[current] ?? (question.type === 'multi' ? [] : '');
   const currentTime = useCurrentTime();
