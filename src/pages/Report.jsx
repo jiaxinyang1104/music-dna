@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import ShareModal from '../components/ShareModal';
@@ -44,6 +44,12 @@ const Report = () => {
   const [expandedLove, setExpandedLove] = useState(false);
   const [showShare, setShowShare] = useState(false);
   const currentTime = useCurrentTime();
+
+  useEffect(() => {
+    if (!location.state?.incomeText) {
+      navigate('/', { replace: true });
+    }
+  }, []);
 
   return (
     <div className={styles.frame}>

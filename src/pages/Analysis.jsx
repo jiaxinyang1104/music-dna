@@ -191,6 +191,12 @@ const Analysis = () => {
   const location = useLocation();
   const resultState = location.state || {};
 
+  useEffect(() => {
+    if (!location.state?.incomeText) {
+      navigate('/', { replace: true });
+    }
+  }, []);
+
   const [msgIdx, setMsgIdx] = useState(0);
   const [visible, setVisible] = useState(true);
   const [done, setDone] = useState(false);

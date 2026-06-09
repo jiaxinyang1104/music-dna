@@ -107,6 +107,12 @@ const Quiz = () => {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
 
+  useEffect(() => {
+    if (!location.state?.songs || location.state.songs.length === 0) {
+      navigate('/', { replace: true });
+    }
+  }, []);
+
   const question = questions[current];
   const selected = answers[current] ?? (question.type === 'multi' ? [] : '');
   const currentTime = useCurrentTime();

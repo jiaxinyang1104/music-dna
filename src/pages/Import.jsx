@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCurrentTime } from '../hooks/useCurrentTime';
 import Toast from '../components/Toast';
@@ -15,6 +15,12 @@ const Import = () => {
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const currentTime = useCurrentTime();
+
+  useEffect(() => {
+    if (!location.state?.nickname) {
+      navigate('/', { replace: true });
+    }
+  }, []);
 
   const parseSongs = (text) => {
     return text
