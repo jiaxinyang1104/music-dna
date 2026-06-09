@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 26px;
+  padding-left: 32px;
+  width: 393px;
+  height: 59px;
+
+  .text {
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-start;
+    padding-bottom: 2px;
+    width: 29px;
+    height: 23px;
+
+    .a941 {
+      margin: -2px 0px 0px;
+      line-height: 23px;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+
+  .container {
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #000000;
+    width: 120px;
+    height: 34px;
+  }
+
+  .container2 {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    column-gap: 6px;
+    opacity: 0.68;
+
+    .icon {
+      display: flex;
+      flex-shrink: 0;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-right: 1px;
+      width: 17px;
+      min-width: 17px;
+      overflow: hidden;
+
+      .vector {
+        margin-top: 6px;
+        border-radius: 1px;
+        background: #ffffff;
+        width: 3px;
+        height: 6px;
+      }
+
+      .vector2 {
+        margin-top: 4px;
+        border-radius: 1px;
+        background: #ffffff;
+        width: 3px;
+        height: 8px;
+      }
+
+      .vector3 {
+        margin-top: 2px;
+        border-radius: 1px;
+        background: #ffffff;
+        width: 3px;
+        height: 10px;
+      }
+
+      .vector4 {
+        border-radius: 1px;
+        background: #ffffff;
+        width: 3px;
+        height: 12px;
+      }
+    }
+
+    .icon2 {
+      flex-shrink: 0;
+      width: 26px;
+      height: 13px;
+      overflow: hidden;
+    }
+  }
+}
